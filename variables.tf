@@ -1,3 +1,5 @@
+variable "DEPLOY_ROLE" {}
+
 variable "region" {
   default = "us-west-2"
 }
