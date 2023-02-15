@@ -18,7 +18,7 @@ resource "aws_cloudwatch_log_group" "main" {
   name = "${var.aws_resource_prefix}-cloudwatch-log-group"
 }
 
-resource "aws_iam_role" "vpc-flow-logs-role" {
+/* resource "aws_iam_role" "vpc-flow-logs-role" {
   name = "${var.aws_resource_prefix}-vpc-flow-logs-role"
 
   assume_role_policy = <<EOF
@@ -61,7 +61,7 @@ resource "aws_iam_role_policy" "vpc-flow-logs-policy" {
 }
 EOF
 }
-
+ */
 resource "aws_internet_gateway" "main" {
   vpc_id = aws_vpc.main.id
 }
