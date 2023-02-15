@@ -1,6 +1,5 @@
 # Ignore Files
 .infracost
 .terraform*
-terraform.*
 
 # Ignore Directories
