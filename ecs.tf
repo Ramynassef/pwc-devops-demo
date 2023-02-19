@@ -5,15 +5,6 @@ resource "aws_cloudwatch_log_group" "main_ecs" {
     Name = "${var.aws_resource_prefix}-task"
   }
 }
-/*
-resource "aws_cloudwatch_log_group" "ecs_task_definition_log" {
-  name = "/ecs/${var.aws_resource_prefix}-service"
-
-  tags = {
-    Name        = "${var.aws_resource_prefix}-ecs_task_definition_log"
-  }
-}
-*/
 resource "aws_cloudwatch_log_group" "ecs_cluster_log" {
   name = "/ecs_cluster/${var.aws_resource_prefix}-cluster"
 

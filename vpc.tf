@@ -18,50 +18,6 @@ resource "aws_cloudwatch_log_group" "main" {
   name = "${var.aws_resource_prefix}-cloudwatch-log-group"
 }
 
-/* resource "aws_iam_role" "vpc-flow-logs-role" {
-  name = "${var.aws_resource_prefix}-vpc-flow-logs-role"
-
-  assume_role_policy = <<EOF
-{
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Sid": "",
-      "Effect": "Allow",
-      "Principal": {
-        "Service": "vpc-flow-logs.amazonaws.com"
-      },
-      "Action": "sts:AssumeRole"
-    }
-  ]
-}
-EOF
-}
-
-resource "aws_iam_role_policy" "vpc-flow-logs-policy" {
-  name = "${var.aws_resource_prefix}-vpc-flow-logs-policy"
-  role = aws_iam_role.vpc-flow-logs-role.id
-
-  policy = <<EOF
-{
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Action": [
-        "logs:CreateLogGroup",
-        "logs:CreateLogStream",
-        "logs:PutLogEvents",
-        "logs:DescribeLogGroups",
-        "logs:DescribeLogStreams"
-      ],
-      "Effect": "Allow",
-      "Resource": "*"
-    }
-  ]
-}
-EOF
-}
- */
 resource "aws_internet_gateway" "main" {
   vpc_id = aws_vpc.main.id
 }

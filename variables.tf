@@ -1,5 +1,3 @@
-variable "DEPLOY_ROLE" {}
-
 variable "region" {
   default = "us-west-2"
 }
@@ -30,7 +28,7 @@ variable "public_subnets" {
 
 variable "availability_zones" {
   description = "List of availability zones"
-  default     = ["us-east-2a", "us-east-2b"]
+  default     = ["us-west-2a", "us-west-2b"]
 }
 
 variable "container_port" {
